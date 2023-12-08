@@ -1,26 +1,33 @@
 body{
-    background-color: black;
+    background-color: rosybrown;
 }
 
 h1{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: white;
-    font-size: 40pt;
+    color: black;
+    font-size: 30pt;
 }
 
 h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    text-align: center;
+    color: black;
+    text-align: left;
     font-size: 20px;
 }
 
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-align: right;
+    font-size: 20px; 
+}
+
 ol{
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    border: red solid 2px;
+    border: black solid 2px;
 }
 
 .image{
@@ -30,14 +37,42 @@ ol{
  }
 
  footer{
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     position: fixed;
     bottom: 0;
 } 
 
-.contaneir1 {
+ .tabuleiro1 {
+    width: 400px;
+    height: 200px;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    border:2px solid black;
+    background: -o-linear-gradient(45deg);
+    justify-content: space-evenly;
+    margin-right: auto;
+    margin-left: 0;
 }
+
+.tabuleiro2 {
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    border:2px solid black;
+    background: -o-linear-gradient(45deg);
+    justify-content: space-evenly;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.quadrado{
+    background-color: black;
+    padding: 1px;
+    text-align: center;
+    border: 1px solid black;
+}
+
