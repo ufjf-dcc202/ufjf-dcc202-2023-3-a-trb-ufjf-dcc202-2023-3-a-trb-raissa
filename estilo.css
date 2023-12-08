@@ -1,33 +1,33 @@
 body{
-    background-color: rosybrown;
+    background-color: black;
 }
 
 h1{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 30pt;
 }
 
 h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
+    color: white;
     text-align: left;
     font-size: 20px;
 }
 
 h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
+    color: white;
     text-align: right;
     font-size: 20px; 
 }
 
 ol{
-    color: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    border: black solid 2px;
+    border: white solid 2px;
 }
 
 .image{
@@ -37,42 +37,36 @@ ol{
  }
 
  footer{
-    color: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     position: fixed;
     bottom: 0;
 } 
 
  .tabuleiro1 {
-    width: 400px;
-    height: 200px;
+    width: 250px;
+    height: 150px;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: repeat(3, 2fr);
-    border:2px solid black;
+    border:3px solid white;
     justify-content: space-evenly;
     margin-right: auto;
     margin-left: 0;
 }
 
 .tabuleiro2 {
-    width: 400px;
-    height: 200px;
+    width: 250px;
+    height: 150px;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: repeat(3, 2fr);
-    border:2px solid black;
+    border:2px solid white;
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: auto;
 }
 
-.quadrado{
-    background-color: black;
-    padding: 1px;
-    text-align: center;
-    border: 1px solid black;
-}
 
 
 
