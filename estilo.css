@@ -19,7 +19,7 @@ h2{
 h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-    text-align: right;
+    text-align: left;
     font-size: 20px; 
 }
 
@@ -57,20 +57,50 @@ ul{
     height: 150px;
     border:2px solid white;
     justify-content: space-evenly;
-    margin-right: 0;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: 0;
 }
+ .container1 {
+    display: grid;
+    margin-left: auto;
+    margin-right: 0;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    gap: 0;
+ }
+
+ .container2{
+    display: grid;
+    margin-left: auto;
+    margin-right: 0;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    gap: 0;
+ }
+
+
  .quadrado1{
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      justify-content: center;
-      border: 3px solid white;
-      width: 300px;
-      height: 250px;
+      display: flex;
+      flex-direction: column;
+      flex-direction: row;
+      border: 1px solid white;
+      width: 250px;
+      height: 80px;
 
  }
+
+ .quadrado2{
+
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    border: 1px solid white;
+    width: 250px;
+    height: 80px;
+
+}
+
 
 
 
