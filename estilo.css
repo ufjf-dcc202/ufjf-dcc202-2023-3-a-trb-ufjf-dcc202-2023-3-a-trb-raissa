@@ -8,3 +8,10 @@ h1{
     color: white;
     font-size: 40pt;
 }
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
