@@ -44,7 +44,7 @@ ul{
 } 
 
  .tabuleiro1 {
-    width: 250px;
+    width: 150px;
     height: 150px;
     border:3px solid white;
     justify-content: space-evenly;
@@ -53,14 +53,24 @@ ul{
 }
 
 .tabuleiro2 {
-    width: 250px;
+    width: 150px;
     height: 150px;
     border:2px solid white;
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: auto;
 }
- 
+ .quadrado1{
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-content: center;
+      border: 3px solid white;
+      width: 300px;
+      height: 250px;
+
+ }
 
 
 
