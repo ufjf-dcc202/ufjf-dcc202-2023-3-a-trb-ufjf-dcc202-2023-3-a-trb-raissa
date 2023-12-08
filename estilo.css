@@ -50,7 +50,6 @@ ol{
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: repeat(3, 2fr);
     border:2px solid black;
-    background: -o-linear-gradient(45deg);
     justify-content: space-evenly;
     margin-right: auto;
     margin-left: 0;
@@ -63,7 +62,6 @@ ol{
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: repeat(3, 2fr);
     border:2px solid black;
-    background: -o-linear-gradient(45deg);
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: auto;
@@ -75,4 +73,6 @@ ol{
     text-align: center;
     border: 1px solid black;
 }
+
+
 
