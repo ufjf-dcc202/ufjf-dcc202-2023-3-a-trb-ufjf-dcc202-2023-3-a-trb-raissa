@@ -14,25 +14,25 @@ let pontosDoJogador2 = 0;
 dadoButton.addEventListener('click', rolarDado);
 
 function dado() {
-    valorDoDado = Math.floor (Math.random()*6)+1;
+    valorDoDado = Math.floor(Math.random()*6)+1;
     jogadorPlayer.getElementsByClassName('cell')[0].innerHTML = valorDoDado;
 
-    const jogador2 = jogadorPlayer === jogador1 ? jogador2:jogador1;
+    const jogadorOponente = jogadorPlayer === jogador1 ? jogador2:jogador1;
 
     if(jogadorPlayer === jogador1){
         pontosDoJogador1 += calculaColunaDePontos(jogadorPlayer)
     }else{
-        jogador2 += calculaColunaDePontos(jogadorPlayer)
+        jogador2 += calculaColunaDePontos(jogadorOponente)
     }
 
     if(fimDoJogo(jogadorPlayer)){
         jogarNovamente();
     }else{
-        jogadorPlayer = jogadorPlayer === jogador1 ? jogador2:jogador1;
+        jogadorPlayer = jogadorOponente;
     }
 }
 
-function descartaDado(player, valor){
+function descartaDado(jogadorPlayer, dadoValor){
     const jogador1 = document.getElementById('jogador1');
     const jogador2 = document.getElementById('jogador2');
  
@@ -42,25 +42,25 @@ function descartaDado(player, valor){
     let dadoValor = 0;
  
     function calculaColunaDePontos(player){
-     const coluna = player.getElementsByClassName('coluna');
+     const colunas = player.querySelectorsAll('.coluna');
      let colunaPontos = 0;
  
-     for(let i = 0; i < coluna.length; i ++){
-         const cell = coluna[i].getElementsByClassName('cell');
-         const dadoValor = [];
+     for(let i = 0; i < colunas.length; i ++){
+         const cells = colunas[i].querySelectorsAll('.cell');
+         const dadoValores = [];
  
-         for(let j = 0; j < cell.length; j ++){
-             const cellValor = parseInt(cell[j].innerHTML);
+         for(let j = 0; j < cells.length; j ++){
+             const cellValor = parseInt(cells[j].innerHTML);
  
-             if(NavigationPreloadManager(cellValor)){
-                 dadoValor.push(cellValor);
+             if(!isNaN(cellValor)){
+                 dadoValores.push(cellValor);
              }
          }
  
-         const unirDadoValores = [...newSet(dadoValor)];
+         const unirDadoValores = [...new Set(dadoValores)];
  
          for (let k = 0; k < unirDadoValores.length; k ++){
-             const  count = unirDadoValoresdadoValores(valor => valor === unirDadoValores[k]).length;
+             const  count = dadoValores.filter(valor => valor === unirDadoValores[k]).length;
              colunaPontos += unirDadoValores[k]*count;
          }
  
@@ -69,10 +69,10 @@ function descartaDado(player, valor){
      }
  
      function fimDoJogo(player) {
-        const cells = player.getElementsByClassName('cell');
+        const cells = player.querySelectorsAll('.cell');
     
         for (let i = 0; i < cells.length; i ++){
-            if ( cells[i].innerHTML ===) {
+            if (!cells[i].innerHTML) {
                 return false;
             }
         }
@@ -80,7 +80,7 @@ function descartaDado(player, valor){
     }
 
     function jogarNovamente () {
-        dadoButton.descarta = true;
+        dadoButton.disabled = true;
     
         const jogador1Pontos = document.createElement('p');
         jogador1Pontos.innerHTML = `Pontuação do Jogador 1 : ${jogador1Pontos}`;
@@ -90,8 +90,6 @@ function descartaDado(player, valor){
         jogador2Pontos.innerHTML = `Pontuação do Jogador 2 : ${jogador2Pontos}`;
         jogador2.appendChild(jogador2Pontos);
     }
-
-    jogarNovamente();
 
 }
 
