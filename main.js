@@ -24,5 +24,13 @@ function dado() {
     }else{
         jogador2 += calculaColunaDePontos(jogadorPlayer)
     }
+
+    if(fimDoJogo(jogadorPlayer)){
+        jogarNovamente();
+    }else{
+        jogadorPlayer = jogadorPlayer === jogador1 ? jogador2:jogador1;
+    }
 }
+
+
    
