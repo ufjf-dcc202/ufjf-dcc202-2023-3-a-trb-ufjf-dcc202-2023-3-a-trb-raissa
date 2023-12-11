@@ -79,4 +79,19 @@ function descartaDado(player, valor){
            return true;
     }
 
-   
+    function jogarNovamente () {
+        dadoButton.descarta = true;
+    
+        const jogador1Pontos = document.createElement('p');
+        jogador1Pontos.innerHTML = `Pontuação do Jogador 1 : ${jogador1Pontos}`;
+        jogador1.appendChild(jogador1Pontos);
+    
+        const jogador2Pontos = document.createElement('p');
+        jogador2Pontos.innerHTML = `Pontuação do Jogador 2 : ${jogador2Pontos}`;
+        jogador2.appendChild(jogador2Pontos);
+    }
+
+    jogarNovamente();
+
+}
+
