@@ -32,4 +32,40 @@ function dado() {
     }
 }
 
-
+function descartaDado(player, valor){
+    const jogador1 = document.getElementById('jogador1');
+    const jogador2 = document.getElementById('jogador2');
+ 
+    const dadoButton = document.getElementById('rolarDado');
+ 
+    let jogadorPlayer = jogador1;
+    let dadoValor = 0;
+ 
+    function calculaColunaDePontos(player){
+     const coluna = player.getElementsByClassName('coluna');
+     let colunaPontos = 0;
+ 
+     for(let i = 0; i < coluna.length; i ++){
+         const cell = coluna[i].getElementsByClassName('cell');
+         const dadoValor = [];
+ 
+         for(let j = 0; j < cell.length; j ++){
+             const cellValor = parseInt(cell[j].innerHTML);
+ 
+             if(NavigationPreloadManager(cellValor)){
+                 dadoValor.push(cellValor);
+             }
+         }
+ 
+         const unirDadoValores = [...newSet(dadoValor)];
+ 
+         for (let k = 0; k < unirDadoValores.length; k ++){
+             const  count = unirDadoValoresdadoValores(valor => valor === unirDadoValores[k]).length;
+             colunaPontos += unirDadoValores[k]*count;
+         }
+ 
+          return colunaPontos;
+ 
+     }
+ 
+    
