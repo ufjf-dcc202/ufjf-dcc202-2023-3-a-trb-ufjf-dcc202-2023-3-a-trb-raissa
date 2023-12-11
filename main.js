@@ -1,3 +1,3 @@
 //main.js
 
-import { }
+import { jogar, jogarNovamente, } form "./"

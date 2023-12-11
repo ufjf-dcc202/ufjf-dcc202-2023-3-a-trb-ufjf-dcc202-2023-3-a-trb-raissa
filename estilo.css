@@ -12,13 +12,13 @@ h1, h2, h3, footer {
 h1{
     
     text-align: center;
-    font-size: 30pt;
+    font-size: 20pt;
 }
 
 h2, h3{
     
     text-align: left;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 ul{
@@ -27,6 +27,7 @@ ul{
     text-align: center;
     list-style: none;
     padding: 0;
+    font-size: 15px;
 }
 
 .image{
@@ -51,25 +52,35 @@ ul{
     margin-left: 0;
 }
 
- .container1, .container2 {
+ .jogador1 {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid white;
+    width: 150px;
+    height: 80px;
     margin-left: auto;
     margin-right: 0;
+    gap: 0;
+   
+ }
+
+ .jogador2 {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-evenly;
+    border: 1px solid white;
+    width: 150px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: 0;
     gap: 0;
  }
 
  .quadrado1, .quadrado2{
-
-      display: flex;
-      flex-direction: column;
-      flex-direction: row;
-      border: 1px solid white;
-      width: 250px;
-      height: 80px;
-      justify-content: center;
-      align-items: center;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
  }
 
  section{
