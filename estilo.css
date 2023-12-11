@@ -21,15 +21,6 @@ h2, h3{
     font-size: 25px;
 }
 
-ul{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-}
-
 .image{
     display: flex;
     justify-content: center;
@@ -43,50 +34,27 @@ ul{
     padding: 10px;
 } 
 
- .tabuleiro1, .tabuleiro2 {
-    width: 150px;
-    height: 150px;
-    border:3px solid white;
-    justify-content: space-evenly;
-    margin-right: auto;
-    margin-left: 0;
+.player {
+    display: inline-block;
+    margin: 20px;
 }
 
- .jogador1 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.coluna {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
     border: 1px solid white;
-    width: 150px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: 0;
-    gap: 0;
-   
- }
+    margin-bottom: 5px;
+}
 
- .jogador2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: 1px solid white;
-    width: 150px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: 0;
-    gap: 0;
- }
-
- .quadrado1, .quadrado2{
-    
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0;
- }
-
- section{
-    margin-top: 0;
-    font-size: 1.2rem;
- }
-
+button {
+    display: block;
+    margin: 20px;
+}
 
 
