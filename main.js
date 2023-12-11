@@ -68,4 +68,15 @@ function descartaDado(player, valor){
  
      }
  
+     function fimDoJogo(player) {
+        const cells = player.getElementsByClassName('cell');
     
+        for (let i = 0; i < cells.length; i ++){
+            if ( cells[i].innerHTML ===) {
+                return false;
+            }
+        }
+           return true;
+    }
+
+   
